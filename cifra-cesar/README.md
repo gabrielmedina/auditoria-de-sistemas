@@ -6,7 +6,7 @@ Em criptografia, a Cifra de César, também conhecida como cifra de troca, códi
 
 ### Resultado
 
-[/projetos/criptografia/cifra-de-cesar](http://gabrielmedina.eti.br/projetos/criptografia/cifra-de-cesar)
+[/projetos/criptografia/cifra-de-cesar](http://gabrielmedina.eti.br/projetos/criptografia/cifra-de-cesar/)
 
 ============
 
