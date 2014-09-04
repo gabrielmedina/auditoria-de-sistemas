@@ -27,6 +27,11 @@ select {
 .grid {
 	width: 400px;
 	margin: 40px auto 0;
+
+	@media (max-width: 500px) {
+    width: 100%;
+    padding: 0 40px 40px;
+  }
 }
 
 
@@ -34,6 +39,10 @@ h1 {
 	color: rgba(#fff, .2);
 	font-size: 5em;
 	text-align: center;
+
+	@media (max-width: 500px) {
+    font-size: 3em;
+  }
 }
 
 p {
@@ -101,5 +110,11 @@ p {
 		&:hover {
 			@include transform(rotate(5deg) scale(1.1));
 		}
+
+		@media (max-width: 500px) {
+	    display: block;
+	    width: 100%;
+	    margin-bottom: 20px;
+	  }
 	}
 }
