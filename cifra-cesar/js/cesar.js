@@ -49,11 +49,7 @@ function decifrar(alfabeto, texto, valor){
 			default:
 				for(var j = 0; j < alfabeto.length; j += 1){
 					if(texto[i] == alfabeto[j]){
-						if((j - valor) < 0){
-							decifrado += alfabeto[26 + (j - valor)];
-						} else {
-							decifrado += alfabeto[j - valor];
-						}
+						decifrado += alfabeto[((j - valor)+26)%26];
 					}
 				}
 		}
