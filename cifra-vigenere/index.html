@@ -3,11 +3,44 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Cifra de Vigenère</title>
-
-		<script src="js/vigenere.js"></script>
-		<script src="js/main.js"></script>
-	</head>
-	<body>
 		
+		<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="grid">
+			<h1>Cifra de Vigenère</h1>
+			<p>
+				por <a href="http://github.com/gabrielmedina">Gabriel Medina</a> e
+				<a href="http://github.com/luizpicolo">Luiz Picolo</a>
+			</p>
+
+			<form id="form-vigenere">
+				<div class="form-input">
+					<label for="chave">Chave</label>
+					<input type="text" name="chave" id="chave" placeholder="chave" required>
+				</div>
+
+				<div class="form-input">
+					<label for="texto">Texto</label>
+					<textarea name="texto" id="texto" placeholder="texto" required></textarea>
+				</div>
+
+				<div class="form-submit">
+					<input id="cifrar" type="submit" value="Cifrar">
+					<input id="decifrar" type="submit" value="Decifrar">
+				</div>
+
+				<div class="form-input">
+					<label for="resultado">Resultado</label>
+					<textarea name="resultado" placeholder="resultado" id="resultado"></textarea>
+				</div>
+			</form>
+		</div>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/vigenere.js"></script>
+		<script src="js/main.js"></script>	
 	</body>
 </html>

@@ -2,13 +2,34 @@
 	Main
 */
 
-var valor = 'limao';
-var texto = 'atacarbasesul';
+$('#form-vigenere').submit(function(event){
+	event.preventDefault();
+});
 
-valor = alterar_cifra(valor, texto);
+$('#cifrar').click(function(){
+	var chave = $('#chave').val();
+	chave = chave.toLowerCase();
 
-var cifrado = cifrar(texto, valor);
-console.log(cifrado);
+	var texto = $('#texto').val();
+	texto = texto.toLowerCase();
 
-var decifrar = decifrar(cifrado, valor);
-console.log(decifrar);
+	var resultado = $('#resultado');
+
+	chave = alterar_chave(chave, texto);
+
+	resultado.text(cifrar(texto, chave));
+});
+
+$('#decifrar').click(function(){
+	var chave = $('#chave').val();
+	chave = chave.toLowerCase();
+
+	var texto = $('#texto').val();
+	texto = texto.toLowerCase();
+
+	var resultado = $('#resultado');
+
+	chave = alterar_chave(chave, texto);
+
+	resultado.text(decifrar(texto, chave));
+});
