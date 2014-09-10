@@ -10,13 +10,22 @@ function cifrar(alfabeto, texto, valor){
 	for(var i = 0; i < texto.length; i += 1){
 		switch(texto[i]){
 			case ' ':
-				cifrado += ' ';
+				cifrado += texto[i];
 				break;
 			case ',':
-				cifrado += ',';
+				cifrado += texto[i];
 				break;
 			case '.':
-				cifrado += '.';
+				cifrado += texto[i];
+				break;
+			case '!':
+				cifrado += texto[i];
+				break;
+			case '?':
+				cifrado += texto[i];
+				break;
+			case '"':
+				cifrado += texto[i];
 				break;
 			default:
 				for(var j = 0; j < alfabeto.length; j += 1){
@@ -38,13 +47,22 @@ function decifrar(alfabeto, texto, valor){
 	for(var i = 0; i < texto.length; i += 1){
 		switch(texto[i]){
 			case ' ':
-				decifrado += ' ';
+				decifrado += texto[i];
 				break;
 			case ',':
-				decifrado += ',';
+				decifrado += texto[i];
 				break;
 			case '.':
-				decifrado += '.';
+				decifrado += texto[i];
+				break;
+			case '!':
+				decifrado += texto[i];
+				break;
+			case '?':
+				decifrado += texto[i];
+				break;
+			case '"':
+				decifrado += texto[i];
 				break;
 			default:
 				for(var j = 0; j < alfabeto.length; j += 1){
