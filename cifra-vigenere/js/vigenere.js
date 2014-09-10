@@ -41,58 +41,79 @@ var posicao = function(caracter){
 
 // Cifrar texto
 var cifrar = function(texto, chave){
-	var texto_cifrado = '';
+	var cifrado = '';
 
 	texto = remover_acento(texto);
 
 	for(var i = 0; i < texto.length; i+=1){
 		switch(texto[i]){
 			case ' ':
-				texto_cifrado += ' ';
+				cifrado += texto[i];
 				break;
 			case ',':
-				texto_cifrado += ',';
+				cifrado += texto[i];
 				break;
 			case '.':
-				texto_cifrado += '.';
+				cifrado += texto[i];
+				break;
+			case '!':
+				cifrado += texto[i];
+				break;
+			case '?':
+				cifrado += texto[i];
+				break;
+			case '"':
+				cifrado += texto[i];
 				break;
 			default:
-				texto_cifrado += cifrar_letra(texto[i], posicao(chave[i]));
+				cifrado += cifrar_letra(texto[i], posicao(chave[i]));
 		}
 	}
 
-	return texto_cifrado;
+	return cifrado;
 }
 
 // Decifrar texto
 var decifrar = function(texto, chave){
-	var texto_decifrado = '';
+	var decifrado = '';
 
 	texto = remover_acento(texto);
 
 	for(var i = 0; i < texto.length; i+=1){
 		switch(texto[i]){
 			case ' ':
-				texto_decifrado += ' ';
+				decifrado += texto[i];
 				break;
 			case ',':
-				texto_decifrado += ',';
+				decifrado += texto[i];
 				break;
 			case '.':
-				texto_decifrado += '.';
+				decifrado += texto[i];
+				break;
+			case '!':
+				decifrado += texto[i];
+				break;
+			case '?':
+				decifrado += texto[i];
+				break;
+			case '"':
+				decifrado += texto[i];
 				break;
 			default:
-				texto_decifrado += decifrar_letra(texto[i], posicao(chave[i]));
+				decifrado += decifrar_letra(texto[i], posicao(chave[i]));
 		}
 	}
 
-	return texto_decifrado;
+	return decifrado;
 }
 
 
 // Alterar chave
 var alterar_chave = function(chave, texto){
 	var nova_chave = '';
+
+	chave = retirar_espacos(chave);
+	chave = remover_acento(chave);
 	
 	while(nova_chave.length < texto.length){
 		nova_chave += chave;
@@ -105,10 +126,25 @@ var alterar_chave = function(chave, texto){
 			chave += nova_chave[i];
 		}
 
+		console.log(nova_chave);
+
 		return adicionar_espacos(texto, chave);
 	}
 
 	return adicionar_espacos(texto, nova_chave);
+}
+
+// Retira espaços da chave
+var retirar_espacos = function(chave){
+	var nova_chave = '';
+
+	for(var i = 0; i < chave.length; i++){
+		if(chave[i] != ' '){
+			nova_chave += chave[i];
+		}
+	}
+
+	return nova_chave;
 }
 
 // Adiciona espaços na chave de acordo com o texto
@@ -124,6 +160,8 @@ var adicionar_espacos = function(texto, chave){
 			j++;
 		}
 	}
+
+	console.log(nova_chave);
 
 	return nova_chave;
 }
