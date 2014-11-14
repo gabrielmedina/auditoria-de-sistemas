@@ -3,7 +3,7 @@
 */
 
 // Alfabeto
-var alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9'];
 
 // Frequência
 function frequencia(texto){
@@ -50,7 +50,7 @@ function remover_acento(texto){
 // Retirar pontuação
 function remover_pontuacao(texto){
 	for(i in texto){
-		texto = 
+		texto =
 			texto
 				.replace(' ', '')
 				.replace('.', '')
@@ -82,16 +82,7 @@ function remover_pontuacao(texto){
 				.replace('*', '')
 				.replace('+', '')
 				.replace('§', '')
-				.replace('=', '')
-				.replace('1', '')
-				.replace('2', '')
-				.replace('3', '')
-				.replace('4', '')
-				.replace('5', '')
-				.replace('6', '')
-				.replace('7', '')
-				.replace('8', '')
-				.replace('9', '');
+				.replace('=', '');
 	}
 	return texto;
 }
